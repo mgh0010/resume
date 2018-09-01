@@ -6,6 +6,7 @@ import { JobsComponent } from './jobs/jobs.component';
 import { JobComponent } from './job/job.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { TopnavComponent } from './topnav/topnav.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     JobsComponent,
     JobComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    TopnavComponent
   ],
   imports: [
     BrowserModule
