@@ -1,3 +1,9 @@
 .job-icon {
   padding-top: 1em;
 }
+
+.experience-card-panel {
+  margin-left: 2em;
+  margin-right: 2em;
+  border: solid #EE6E73 2px;
+}
