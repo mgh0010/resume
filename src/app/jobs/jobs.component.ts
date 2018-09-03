@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, OnInit} from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'app-jobs',
   templateUrl: './jobs.component.html',
   styleUrls: ['./jobs.component.css']
 })
-export class JobsComponent implements OnInit {
+export class JobsComponent implements OnInit, AfterViewInit {
+  time = 500;
   jobs = {
     'selex': {
         'title': 'Software Engineer',
@@ -55,6 +57,28 @@ export class JobsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    setTimeout(() => {
+      const expHeader = $('#exp-header');
+      expHeader.removeClass('invisible');
+      expHeader.addClass('fadeInUp');
+    }, this.time);
+  }
+
+  ngAfterViewInit() {
+    this.animateInJobs();
+  }
+
+  animateInJobs() {
+    this.time += 500;
+    let job;
+    for (let index = 0; index < this.getJobs().length; ++index) {
+      setTimeout(() => {
+        job = $('#job' + index);
+        job.removeClass('invisible');
+        job.addClass('fadeInUp');
+      }, this.time);
+      this.time += 500;
+    }
   }
 
   getJobs() {

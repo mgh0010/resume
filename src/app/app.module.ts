@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {Routes, RouterModule} from '@angular/router';
+
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,6 +10,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TopnavComponent } from './topnav/topnav.component';
 
+const routes: Routes = [
+  { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
+  { path: 'landing-page', component: LandingPageComponent},
+  { path: 'resume', component: JobsComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +25,8 @@ import { TopnavComponent } from './topnav/topnav.component';
     TopnavComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
