@@ -1,0 +1,27 @@
+<div class="container">
+  <!--shopping cart icon-->
+  <div class="row mb-0">
+    <div class="col s12">
+      <i class="material-icons shopping-cart-icon">shopping_cart</i><span class="new badge">4</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <h1 class="center animated slow myp m-0" id="skills-header">Skills</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12">
+      <p> Choose the skills you are looking for!</p>
+    </div>
+    <div *ngFor="let skill of ms.skills" class="col skill-card-container s6 m4">
+      <div class="skill-card waves-effect waves-purple"
+           [id]="skill+ '-id'"
+           (click)="toggleSkillSelect(skill+'-id')">
+        <h5 class="center">{{skill}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
