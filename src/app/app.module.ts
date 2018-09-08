@@ -10,6 +10,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { ShopComponent } from './shop/shop.component';
+import { SkillListComponent } from './skill-list/skill-list.component';
+import { CartIconComponent } from './cart-icon/cart-icon.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
@@ -25,7 +27,9 @@ const routes: Routes = [
     SidenavComponent,
     LandingPageComponent,
     TopnavComponent,
-    ShopComponent
+    ShopComponent,
+    SkillListComponent,
+    CartIconComponent
   ],
   imports: [
     BrowserModule,

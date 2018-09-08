@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MichaelService } from '../services/michael.service';
-
-declare var $: any;
 
 @Component({
   selector: 'app-shop',
@@ -10,18 +7,8 @@ declare var $: any;
 })
 export class ShopComponent implements OnInit {
 
-  constructor( public ms: MichaelService) { }
+  constructor() { }
 
   ngOnInit() {
   }
-
-  toggleSkillSelect(id) {
-    const skill = $('#' + id);
-    if (skill.hasClass('selected')) {
-      skill.removeClass('selected');
-    } else {
-      skill.addClass('selected');
-    }
-  }
-
 }
