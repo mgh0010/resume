@@ -4,8 +4,8 @@
   </div>
   <div *ngFor="let skill of ms.skills" class="col skill-card-container s6 m4">
     <div class="skill-card waves-effect waves-purple z-depth-2 hoverable"
-         [id]="skill.replace(' ','') + '-id'"
-         (click)="toggleSkillSelect(skill.replace(' ', ''))">
+         [id]="takeAwaySpaces(skill) + '-id'"
+         (click)="toggleSkillSelect(takeAwaySpaces(skill))">
       <h5 class="center">{{skill}}</h5>
     </div>
   </div>

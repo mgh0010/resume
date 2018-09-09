@@ -17,7 +17,7 @@ export class CartService {
     let index = 0;
     for (const skill of this.chosenSkills) {
       if (skill === skill_to_remove) {
-        this.chosenSkills.splice(skill, index);
+        this.chosenSkills.splice(index, 1);
       }
       ++index;
     }

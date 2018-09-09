@@ -1,5 +1,8 @@
 # Resume
 
 ## Todo
-1 => 'Not finding what you're looking for? ...'
-2 => 
+<ol>
+<li>'Not finding what you're looking for? ...'</li>
+<li> Put nav on mobile </li>
+<li> make sopping cart screen </li>
+</ol>
