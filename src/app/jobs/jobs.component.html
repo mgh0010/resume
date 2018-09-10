@@ -2,7 +2,8 @@
 <div *ngFor="let job of getJobs(); let i = index">
   <div [id]="'job' + i" class="row card-panel experience-card-panel myabg invisible fast animated">
     <div class="col s12 m2 offset-m1 center">
-      <i class="large material-icons job-icon myp">airplanemode_active</i>
+      <i class="large material-icons job-icon myp">{{jobs[job]['icon']}}</i>
+      <h6>{{jobs[job]['time']}}</h6>
     </div>
     <div class="col s12 m8">
       <blockquote>
@@ -10,7 +11,6 @@
         <h2 class="mys">{{jobs[job]['title']}}</h2>
         <h4 class="myp">{{jobs[job]['company']}}</h4>
         <h5><i class="material-icons">location_on</i>{{jobs[job]['location']}}</h5>
-        <h5>{{jobs[job]['time']}}</h5>
         <h6>{{jobs[job]['description']}}</h6>
       </div>
       </blockquote>

@@ -12,12 +12,16 @@ import { TopnavComponent } from './topnav/topnav.component';
 import { ShopComponent } from './shop/shop.component';
 import { SkillListComponent } from './skill-list/skill-list.component';
 import { CartIconComponent } from './cart-icon/cart-icon.component';
+import { CartComponent } from './cart/cart.component';
+import { ResumeComponent } from './resume/resume.component';
+import { AttributeListComponent } from './attribute-list/attribute-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
   { path: 'landing-page', component: LandingPageComponent},
   { path: 'shop', component: ShopComponent},
-  { path: 'resume', component: JobsComponent}
+  { path: 'cart', component: CartComponent},
+  { path: 'resume', component: ResumeComponent}
 ];
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ const routes: Routes = [
     TopnavComponent,
     ShopComponent,
     SkillListComponent,
-    CartIconComponent
+    CartIconComponent,
+    CartComponent,
+    ResumeComponent,
+    AttributeListComponent
   ],
   imports: [
     BrowserModule,

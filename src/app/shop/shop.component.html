@@ -1,13 +1,24 @@
 <div class="container">
-  <!--shopping cart icon-->
-  <app-cart-icon></app-cart-icon>
+  <h1 class="center mys animated fast" id="shop-header">Shop</h1>
+    <p id="build-web-dev-p"> <span class="myp">Build</span> you're optimal Web Developer! </p>
 
-  <div class="row">
-    <div class="col s12">
-      <h1 class="center animated slow myp m-0" id="skills-header">Skills</h1>
-    </div>
-  </div>
-
-  <app-skill-list></app-skill-list>
+  <ul class="collapsible popout">
+    <li class="">
+      <div class="collapsible-header mysbg"><i class="material-icons">unfold_more</i>Skills</div>
+      <div class="collapsible-body">
+        <app-skill-list></app-skill-list>
+      </div>
+    </li>
+    <li class="active">
+      <div class="collapsible-header mypbg"><i class="material-icons">unfold_more</i>Attributes</div>
+      <div class="collapsible-body">
+        <app-attribute-list></app-attribute-list>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header grey lighten-1"><i class="material-icons">unfold_more</i>Experience</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
 
 </div>

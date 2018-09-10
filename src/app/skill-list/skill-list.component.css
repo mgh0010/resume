@@ -1,11 +1,11 @@
 .skill-card {
-  min-height: 7em;
-  padding-top: 1em;
+  min-height: 9em;
+  padding-top: 1.5em;
   display: block;
 }
 
 .selected {
-  background-color: #E57373;
+  background-color: #90A4AE;
   color: #212121;
 }
 

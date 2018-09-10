@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col s12">
-    <p> Choose the skills you are looking for!</p>
+    <p> <span class="mys">Choose</span> the skills you're looking for!</p>
   </div>
-  <div *ngFor="let skill of ms.skills" class="col skill-card-container s6 m4">
+  <div *ngFor="let skill of ms.skillIds()" class="col skill-card-container s6 m4">
     <div class="skill-card waves-effect waves-purple z-depth-2 hoverable"
-         [id]="takeAwaySpaces(skill) + '-id'"
-         (click)="toggleSkillSelect(takeAwaySpaces(skill))">
-      <h5 class="center">{{skill}}</h5>
+         [id]="skill"
+         (click)="toggleSkillSelect(skill)">
+      <h5 class="center">{{ms.getSkillName(skill)}}</h5>
     </div>
   </div>
 </div>

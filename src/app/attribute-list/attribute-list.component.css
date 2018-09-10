@@ -1,0 +1,18 @@
+.attr-card {
+  display: block;
+}
+
+.selected {
+  background-color: #E57373;
+  color: #212121 !important;
+}
+
+.attr-card-container {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.attr-card:hover {
+  background-color: #E57373;
+  cursor: pointer;
+}
