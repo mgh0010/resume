@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { MichaelService } from '../services/michael.service';
 import { CartService } from '../services/cart.service';
 
@@ -9,37 +9,44 @@ declare var $: any;
   templateUrl: './attribute-list.component.html',
   styleUrls: ['./attribute-list.component.css']
 })
-export class AttributeListComponent implements OnInit {
+export class AttributeListComponent implements OnInit, AfterViewInit {
 
   constructor(public ms: MichaelService,
               public cs: CartService) { }
 
   ngOnInit() {
-    this.reselectChosenSkills();
   }
 
-  reselectChosenSkills() {
-    let i = 0;
+  ngAfterViewInit() {
+    this.reselectChosenAttributes();
   }
 
-  toggleAttributeSelect(attr) {
-    // get the skill object
-    const skill_object = $('#' + attr);
-    if (this.cs.chosenSkills.includes(this.ms.getSkillName(attr))) {
-      // remove the selected class
-      skill_object.removeClass('selected');
-      // remove the skill from the skill list
-      this.cs.removeSkill(this.ms.getSkillName(attr));
-    } else {
-      // add the selected class
-      skill_object.addClass('selected');
-      // add the skill to the skill list
-      this.cs.addSkill(this.ms.getSkillName(attr));
+  reselectChosenAttributes() {
+    for (const attr of this.ms.attributes()) {
+      if (this.cs.chosenAttritubes.includes(attr)) {
+        $('#' + this.takeAwaySpaces(attr)).addClass('selected');
+      }
     }
   }
 
-  takeAwaySpaces(skill: string) {
-    return skill.replace(/ /g, '');
+  toggleAttributeSelect(attr) {
+    // get the attr object
+    const attr_object = $('#' + this.takeAwaySpaces(attr));
+    if (this.cs.chosenAttritubes.includes(attr)) {
+      // remove the selected class
+      attr_object.removeClass('selected');
+      // remove the attr from the attr list
+      this.cs.removeAttribute(attr);
+    } else {
+      // add the selected class
+      attr_object.addClass('selected');
+      // add the attr to the attr list
+      this.cs.addAttribute(attr);
+    }
+  }
+
+  takeAwaySpaces(str: string) {
+    return str.replace(/ /g, '');
   }
 
 }

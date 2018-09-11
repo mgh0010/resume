@@ -4,8 +4,8 @@
   </div>
   <div *ngFor="let attr of ms.attributes()" class="col attr-card-container s12">
     <div class="attr-card waves-effect waves-purple z-depth-2 hoverable"
-         [id]="attr">
-         <!--(click)="toggleSkillSelect(skill)">-->
+         [id]="takeAwaySpaces(attr)"
+         (click)="toggleAttributeSelect(attr)">
       <h5 class="center">{{attr}}</h5>
     </div>
   </div>
