@@ -1,0 +1,26 @@
+<h1 class="center mys animated fast" id="">Projects</h1>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let project of ps.projects()" class="col s12 m6">
+      <div class="card project-card hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" [src]="ps.projectData[project]['imageUrl']">
+        </div>
+        <div class="card-content mypbg">
+          <span class="card-title activator grey-text text-darken-4">
+            {{ps.projectData[project]['name']}}
+            <i class="material-icons right">more_vert</i>
+          </span>
+          <p><a class="btn btn-flat" [href]="ps.projectData[project]['linkToSite']">Link to project</a></p>
+        </div>
+        <div class="card-reveal mypbg">
+          <span class="card-title grey-text text-darken-4">
+            {{ps.projectData[project]['name']}} Details
+            <i class="material-icons right">close</i>
+          </span>
+          <p class="mya">{{ps.projectData[project]['details']}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,13 +15,15 @@ import { CartIconComponent } from './cart-icon/cart-icon.component';
 import { CartComponent } from './cart/cart.component';
 import { ResumeComponent } from './resume/resume.component';
 import { AttributeListComponent } from './attribute-list/attribute-list.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
   { path: 'landing-page', component: LandingPageComponent},
   { path: 'shop', component: ShopComponent},
   { path: 'cart', component: CartComponent},
-  { path: 'resume', component: ResumeComponent}
+  { path: 'projects', component: ProjectsComponent},
+  { path: 'work-history', component: ResumeComponent}
 ];
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ const routes: Routes = [
     CartIconComponent,
     CartComponent,
     ResumeComponent,
-    AttributeListComponent
+    AttributeListComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
