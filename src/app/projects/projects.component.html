@@ -1,8 +1,8 @@
-<h1 class="center mys animated fast" id="">Projects</h1>
+<h1 class="center mys animated fast invisible" id="projects-header">Projects</h1>
 <div class="container">
   <div class="row">
-    <div *ngFor="let project of ps.projects()" class="col s12 m6">
-      <div class="card project-card hoverable">
+    <div *ngFor="let project of ps.projects(); let i = index" class="col s12 m6">
+      <div class="card project-card hoverable invisible animated fast" [id]="'project' + i">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" [src]="ps.projectData[project]['imageUrl']">
         </div>

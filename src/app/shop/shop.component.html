@@ -1,24 +1,29 @@
 <div class="container">
-  <h1 class="center mys animated fast" id="shop-header">Shop</h1>
-    <p id="build-web-dev-p"> <span class="myp">Build</span> you're optimal Web Developer! </p>
+  <h1 class="center mys animated fast invisible" id="shop-header">Shop</h1>
+    <p id="build-web-dev-p" class="animated fast invisible">
+      <span class="myp">Build</span>
+      you're optimal Web Developer!
+    </p>
 
-  <ul class="collapsible popout">
-    <li class="active">
-      <div class="collapsible-header mysbg"><i class="material-icons">unfold_more</i>Skills</div>
-      <div class="collapsible-body">
-        <app-skill-list></app-skill-list>
-      </div>
-    </li>
+  <blockquote id="blockquote-with-collapsible" class="invisible fast animated">
+  <ul class="collapsible popout animated invisible fast" id="collapsible-for-choosing">
+      <li class="active">
+        <div class="collapsible-header mysbg"><i class="material-icons">unfold_more</i>Skills</div>
+        <div class="collapsible-body">
+          <app-skill-list></app-skill-list>
+        </div>
+      </li>
     <li class="">
       <div class="collapsible-header mypbg"><i class="material-icons">unfold_more</i>Attributes</div>
       <div class="collapsible-body">
         <app-attribute-list></app-attribute-list>
       </div>
     </li>
-    <li>
-      <div class="collapsible-header grey lighten-1"><i class="material-icons">unfold_more</i>Experience</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    <!--<li>-->
+      <!--<div class="collapsible-header grey lighten-1"><i class="material-icons">unfold_more</i>Experience</div>-->
+      <!--<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+    <!--</li>-->
   </ul>
+  </blockquote>
 
 </div>

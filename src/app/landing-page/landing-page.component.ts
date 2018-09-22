@@ -11,13 +11,17 @@ export class LandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('#hi').removeClass('hide');
+    $('#hi').removeClass('invisible');
     $('#hi').addClass('flipInX');
 
     setTimeout(() => {
-      $('#find-help').removeClass('hide');
+      $('#find-help').removeClass('invisible');
       $('#find-help').addClass('flipInX');
-    }, 2000);
+    }, 1000);
+    setTimeout(() => {
+      $('#go-shop').removeClass('invisible');
+      $('#go-shop').addClass('flipInX');
+    }, 1500);
   }
 
 }
