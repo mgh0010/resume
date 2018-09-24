@@ -32,7 +32,7 @@ export class JobsComponent implements OnInit, AfterViewInit {
     'adtran1': {
       'title': 'User Experience Co-op',
       'company': 'ADTRAN',
-      'location': 'Auburn, AL',
+      'location': 'Huntsville, AL',
       'time': 'May 2016 - Aug 2016',
       'description': `Design User interfaces per User Experience guidelines for several widgets in
         ADTRAN's MOSAIC framework. Design these widgets by means of heavy research, user testing,
