@@ -29,6 +29,8 @@ export class ShopComponent implements OnInit, AfterViewInit {
       $('#collapsible-for-choosing').addClass('fadeInUp');
       $('#blockquote-with-collapsible').removeClass('invisible');
       $('#blockquote-with-collapsible').addClass('fadeInUp');
+      $('#go-to-cart-btn').removeClass('invisible');
+      $('#go-to-cart-btn').addClass('fadeInUp');
     }, 500);
   }
 }

@@ -1,14 +1,19 @@
+<div class="container">
+  <a href="/#/shop"><i class="material-icons waves-purple waves-effect white-text">arrow_back</i></a>
+</div>
 <h1 class="center mys animated fast invisible" id="cart-header">Cart</h1>
 <div class="container">
   <div class="row">
     <div class="col s12">
       <ul>
-        <li class="card-panel mysbg" *ngFor="let skill of cs.chosenSkills">
+        <h4 class="mys">Chosen Skills</h4>
+        <li class="card-panel mysbg mya" *ngFor="let skill of cs.chosenSkills">
           {{skill}}
         </li>
       </ul>
       <ul>
-        <li *ngFor="let attr of cs.chosenAttritubes" class="mya">
+        <h4 class="myp">Chosen Attributes</h4>
+        <li class="card-panel mypbg mya" *ngFor="let attr of cs.chosenAttritubes">
           {{attr}}
         </li>
       </ul>
