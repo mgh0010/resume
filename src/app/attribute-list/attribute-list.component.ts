@@ -23,7 +23,7 @@ export class AttributeListComponent implements OnInit, AfterViewInit {
 
   reselectChosenAttributes() {
     for (const attr of this.ms.attributes()) {
-      if (this.cs.chosenAttritubes.includes(attr)) {
+      if (this.cs.chosenAttributes.includes(attr)) {
         $('#' + this.takeAwaySpaces(attr)).addClass('selected');
       }
     }
@@ -32,7 +32,7 @@ export class AttributeListComponent implements OnInit, AfterViewInit {
   toggleAttributeSelect(attr) {
     // get the attr object
     const attr_object = $('#' + this.takeAwaySpaces(attr));
-    if (this.cs.chosenAttritubes.includes(attr)) {
+    if (this.cs.chosenAttributes.includes(attr)) {
       // remove the selected class
       attr_object.removeClass('selected');
       // remove the attr from the attr list

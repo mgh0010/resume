@@ -9,7 +9,7 @@ declare var $: any;
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit, AfterViewInit {
-  time = 500;
+  time = 0;
 
   constructor(public ps: ProjectsService) { }
 
@@ -25,7 +25,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   }
 
   private animateInProjects() {
-    this.time += 300;
+    this.time += 250;
     let job;
     for (let index = 0; index < this.ps.projects().length; ++index) {
       setTimeout(() => {
@@ -33,7 +33,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         job.removeClass('invisible');
         job.addClass('fadeInUp');
       }, this.time);
-      this.time += 300;
+      this.time += 250;
     }
   }
 }

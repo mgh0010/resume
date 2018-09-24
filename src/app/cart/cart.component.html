@@ -6,15 +6,25 @@
   <div class="row">
     <div class="col s12">
       <ul>
-        <h4 class="mys">Chosen Skills</h4>
-        <li class="card-panel mysbg mya" *ngFor="let skill of cs.chosenSkills">
+        <h4 class="mys invisible animated fast" id="chosen-skill-header">Chosen Skills</h4>
+        <li class="card-panel mysbg mya invisible animated fast"
+            *ngFor="let skill of cs.chosenSkills; let i = index"
+            [id]="'skill' + i">
           {{skill}}
+          <span class="right">
+            <i class="material-icons waves-effect waves-purple" (click)="cs.removeSkill(skill)">delete</i>
+          </span>
         </li>
       </ul>
       <ul>
-        <h4 class="myp">Chosen Attributes</h4>
-        <li class="card-panel mypbg mya" *ngFor="let attr of cs.chosenAttritubes">
+        <h4 class="myp invisible animated fast" id="chosen-attr-header">Chosen Attributes</h4>
+        <li class="card-panel mypbg mya invisible animated fast"
+            *ngFor="let attr of cs.chosenAttributes; let i = index"
+            [id]="'attr' + i">
           {{attr}}
+          <span class="right">
+            <i class="material-icons waves-effect waves-purple" (click)="cs.removeAttribute(attr)">delete</i>
+          </span>
         </li>
       </ul>
     </div>

@@ -1,4 +1,6 @@
-import {AfterContentInit, AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import { AnimationService } from '../services/animation.service';
+
 declare var $: any;
 
 @Component({
@@ -7,7 +9,7 @@ declare var $: any;
   styleUrls: ['./jobs.component.css']
 })
 export class JobsComponent implements OnInit, AfterViewInit {
-  time = 500;
+  time = 0;
   jobs = {
     'selex': {
       'title': 'Software Engineer',
@@ -59,13 +61,11 @@ export class JobsComponent implements OnInit, AfterViewInit {
     }
   };
 
-  constructor() { }
+  constructor(public as: AnimationService) { }
 
   ngOnInit() {
     setTimeout(() => {
-      const expHeader = $('#exp-header');
-      expHeader.removeClass('invisible');
-      expHeader.addClass('fadeInUp');
+      this.as.animateIn('#exp-header', 'fadeInUp');
     }, this.time);
   }
 
@@ -74,15 +74,14 @@ export class JobsComponent implements OnInit, AfterViewInit {
   }
 
   animateInJobs() {
-    this.time += 500;
+    this.time += 250;
     let job;
     for (let index = 0; index < this.getJobs().length; ++index) {
       setTimeout(() => {
-        job = $('#job' + index);
-        job.removeClass('invisible');
-        job.addClass('fadeInUp');
+        job = '#job' + index;
+        this.as.animateIn(job, 'fadeInUp');
       }, this.time);
-      this.time += 500;
+      this.time += 250;
     }
   }
 

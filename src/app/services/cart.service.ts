@@ -4,24 +4,28 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-  chosenSkills = [];
-  chosenAttritubes = [];
+  chosenSkills = ['Web Dev'];
+  chosenAttributes = ['Efficient'];
 
-  constructor() { }
+  constructor() {console.log(this.numItemsInCart()); }
+
+  numItemsInCart() {
+    return this.chosenSkills.length + this.chosenAttributes.length;
+  }
 
   addSkill(skill) {
     this.chosenSkills.push(skill);
   }
 
   addAttribute(attr) {
-    this.chosenAttritubes.push(attr);
+    this.chosenAttributes.push(attr);
   }
 
   removeAttribute(attr_to_remove: string) {
     let index = 0;
-    for (const attr of this.chosenAttritubes) {
+    for (const attr of this.chosenAttributes) {
       if (attr === attr_to_remove) {
-        this.chosenAttritubes.splice(index, 1);
+        this.chosenAttributes.splice(index, 1);
       }
       ++index;
     }

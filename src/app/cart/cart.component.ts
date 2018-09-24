@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { AnimationService } from '../services/animation.service';
 
 declare var $: any;
 
@@ -8,15 +9,47 @@ declare var $: any;
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
+export class CartComponent implements AfterViewInit {
+  time = 0;
 
-  constructor( public cs: CartService) { }
+  constructor( public cs: CartService,
+               public as: AnimationService) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     setTimeout(() => {
-      $('#cart-header').removeClass('invisible');
-      $('#cart-header').addClass('fadeInUp');
-    });
+      this.as.animateIn('#cart-header', 'fadeInUp');
+    }, this.time);
+    this.time += 250;
+    this.animateInCartItems();
+  }
+
+  animateInCartItems() {
+    // animate in skill header
+    setTimeout(() => {
+      this.as.animateIn('#chosen-skill-header', 'flipInX');
+    }, this.time);
+
+    let cartItem;
+    // animate in Skills
+    for (let index = 0; index < this.cs.chosenSkills.length; ++index) {
+      setTimeout(() => {
+        cartItem = $('#skill' + index);
+        this.as.animateIn(cartItem, 'flipInX');
+      }, this.time);
+      this.time += 250;
+    }
+    // animate in attribute header
+    setTimeout(() => {
+      this.as.animateIn('#chosen-attr-header', 'flipInX');
+    }, this.time);
+    // animate in Attributes
+    for (let index = 0; index < this.cs.chosenAttributes.length; ++index) {
+      setTimeout(() => {
+        cartItem = $('#attr' + index);
+        this.as.animateIn(cartItem, 'flipInX');
+      }, this.time);
+      this.time += 250;
+    }
   }
 
 }

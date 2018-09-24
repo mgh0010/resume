@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {CartService} from '../services/cart.service';
 
 declare var $: any;
 
@@ -7,9 +8,9 @@ declare var $: any;
   templateUrl: './cart-icon.component.html',
   styleUrls: ['./cart-icon.component.css']
 })
-export class CartIconComponent implements OnInit {
+export class CartIconComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  constructor(public cs: CartService) { }
 
   ngOnInit() {
     $(document).ready(function() {

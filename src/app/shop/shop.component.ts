@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-
+import {AnimationService} from '../services/animation.service';
 declare var $: any;
 
 @Component({
@@ -9,7 +9,7 @@ declare var $: any;
 })
 export class ShopComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(public as: AnimationService) { }
 
   ngOnInit() {
     $(document).ready(function() {
@@ -18,19 +18,14 @@ export class ShopComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    $('#shop-header').removeClass('invisible');
-    $('#shop-header').addClass('flipInX');
+    this.as.animateIn('#shop-header', 'flipInX');
     setTimeout(() => {
-      $('#build-web-dev-p').removeClass('invisible');
-      $('#build-web-dev-p').addClass('fadeInUp');
-    }, 500);
+      this.as.animateIn('#build-web-dev-p', 'fadeInUp');
+    }, 250);
     setTimeout(() => {
-      $('#collapsible-for-choosing').removeClass('invisible');
-      $('#collapsible-for-choosing').addClass('fadeInUp');
-      $('#blockquote-with-collapsible').removeClass('invisible');
-      $('#blockquote-with-collapsible').addClass('fadeInUp');
-      $('#go-to-cart-btn').removeClass('invisible');
-      $('#go-to-cart-btn').addClass('fadeInUp');
-    }, 500);
+      this.as.animateIn('#collapsible-for-choosing', 'fadeInUp');
+      this.as.animateIn('#blockquote-with-collapsible', 'fadeInUp');
+      this.as.animateIn('#go-to-cart-btn', 'fadeInUp');
+    }, 250);
   }
 }

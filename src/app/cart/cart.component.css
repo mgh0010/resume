@@ -1,3 +1,11 @@
 #cart-header {
   margin-top: 0;
 }
+
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  color: #f5f5f5;
+}
