@@ -16,11 +16,14 @@ export class CartComponent implements AfterViewInit {
                public as: AnimationService) { }
 
   ngAfterViewInit() {
+    const myHeader = document.getElementById('side-nav-header');
+    myHeader.scrollTop = 0;
     setTimeout(() => {
       this.as.animateIn('#cart-header', 'fadeInUp');
     }, this.time);
     this.time += 250;
     this.animateInCartItems();
+    this.animateInCheckoutBtn();
   }
 
   animateInCartItems() {
@@ -52,4 +55,9 @@ export class CartComponent implements AfterViewInit {
     }
   }
 
+  private animateInCheckoutBtn() {
+    setTimeout(() => {
+      this.as.animateIn('#go-to-checkout-btn', 'fadeIn');
+    }, this.time);
+  }
 }

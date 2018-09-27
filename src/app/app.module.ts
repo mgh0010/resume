@@ -16,6 +16,7 @@ import { CartComponent } from './cart/cart.component';
 import { ResumeComponent } from './resume/resume.component';
 import { AttributeListComponent } from './attribute-list/attribute-list.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent},
   { path: 'cart', component: CartComponent},
   { path: 'projects', component: ProjectsComponent},
-  { path: 'work-history', component: ResumeComponent}
+  { path: 'work-history', component: ResumeComponent},
+  { path: 'checkout', component: CheckoutComponent}
 ];
 @NgModule({
   declarations: [
@@ -39,11 +41,12 @@ const routes: Routes = [
     CartComponent,
     ResumeComponent,
     AttributeListComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: true, scrollPositionRestoration: 'enabled'})
   ],
   providers: [],
   bootstrap: [AppComponent]
