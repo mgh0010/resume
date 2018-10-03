@@ -1,3 +1,11 @@
 #me-img {
   max-height: 25em;
 }
+
+.link-btn {
+  width: 75% !important;
+}
+
+.link-btn:hover {
+  opacity: .8;
+}
