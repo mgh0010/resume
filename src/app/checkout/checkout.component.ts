@@ -19,7 +19,9 @@ export class CheckoutComponent implements AfterViewInit {
     setTimeout(() => {
       this.as.animateIn('#me-img', 'fadeIn');
     }, this.time);
+
     this.loadInBtns();
+    this.loadInLargeBtns();
   }
 
   private loadInBtns() {
@@ -28,6 +30,21 @@ export class CheckoutComponent implements AfterViewInit {
     }, this.time);
     setTimeout(() => {
       this.as.animateIn('#projects-btn', 'fadeInUp');
+    }, this.time);
+    setTimeout(() => {
+      this.as.animateIn('#about-me-btn', 'fadeInUp');
+    }, this.time);
+  }
+
+  private loadInLargeBtns() {
+    setTimeout(() => {
+      this.as.animateIn('#work-history-btn-large', 'fadeInUp');
+    }, this.time);
+    setTimeout(() => {
+      this.as.animateIn('#projects-btn-large', 'fadeInUp');
+    }, this.time);
+    setTimeout(() => {
+      this.as.animateIn('#about-me-btn-large', 'fadeInUp');
     }, this.time);
   }
 }

@@ -4,6 +4,7 @@
 
 .link-btn {
   width: 75% !important;
+  padding: 0 4px !important;
 }
 
 .link-btn:hover {

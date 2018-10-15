@@ -33,6 +33,9 @@ main {
 .myabg {
   background-color: #212121 !important;
 }
+.myalbg {
+  background-color: #81c784 !important;
+}
 .mya {
   color: #212121 !important;
 }
@@ -55,4 +58,8 @@ body {
 
 .mb-0 {
   margin-bottom: 0px;
+}
+
+.p-0 {
+  padding: 0 !important;
 }
