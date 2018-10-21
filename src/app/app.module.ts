@@ -17,6 +17,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { AttributeListComponent } from './attribute-list/attribute-list.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [
   { path: '', redirectTo: 'landing-page', pathMatch: 'full'},
@@ -46,7 +48,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes, {useHash: true, scrollPositionRestoration: 'enabled'})
+    RouterModule.forRoot(routes, {useHash: true, scrollPositionRestoration: 'enabled'}),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
