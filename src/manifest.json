@@ -1,7 +1,7 @@
 {
-  "name": "resume",
-  "short_name": "resume",
-  "theme_color": "#1976d2",
+  "name": "michael-guy-harrison",
+  "short_name": "mgh",
+  "theme_color": "#E57373",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
