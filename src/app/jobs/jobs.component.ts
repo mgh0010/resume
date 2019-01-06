@@ -11,11 +11,20 @@ declare var $: any;
 export class JobsComponent implements OnInit, AfterViewInit {
   time = 0;
   jobs = {
+    'Crossvale': {
+      'title': 'Associate Developer',
+      'company': 'Crossvale',
+      'location': 'Office: Birmingham, AL | HQ: Dallas, TX',
+      'time': 'October 2018 - Present',
+      'description': `Engineer, develop, and design BBVA Compass Bank front-end software currently in angularJS (soon to be Polymer). 
+                      This application allows in branch employees to perform bank related matters on the web.`,
+      'icon': 'code'
+    },
     'selex': {
       'title': 'Software Engineer',
       'company': 'Selex Galileo Inc',
       'location': 'Huntsville, AL',
-      'time': 'August 2018 - Present',
+      'time': 'August 2018 - October 2018',
       'description': 'Build and maintain C++ Electronic Warfare Avionic Systems with Rhapsody and Visual Studio.',
       'icon': 'airplanemode_active'
     },

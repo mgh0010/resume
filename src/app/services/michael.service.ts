@@ -6,8 +6,11 @@ import { Injectable } from '@angular/core';
 export class MichaelService {
   skillsData = {
     'angular': {'name': 'Angular', 'id': 'angular'},
-    'ngrx': {'name': 'NgRx', 'id': 'ngrx'},
-    'rxjs': {'name': 'RxJs', 'id': 'rxjs'},
+    'bs-in-software-eng': {'name': 'BS in Sofware Eng', 'id': 'bs-in-software-eng'},
+    'algorithms': {'name': 'Algorithms', 'id': 'algorithms'},
+    'software-design': {'name': 'Software Design', 'id': 'software-design'},
+    'software-process': {'name': 'Software Process', 'id': 'software-process'},
+    'clean-code': {'name': 'Clean Code', 'id': 'clean-code'},
     'javascript': {'name': 'Javascript', 'id': 'javascript'},
     'css': {'name': 'CSS', 'id': 'css'},
     'html': {'name': 'HTML', 'id': 'html'},
