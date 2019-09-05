@@ -29,6 +29,7 @@
     "@angular/pwa": "^0.10.7",
     "@angular/router": "^8.2.4",
     "@angular/service-worker": "^8.2.4",
+    "typescript": "^3.5.3",
     "animate.css": "^3.7.2",
     "core-js": "^2.6.9",
     "express": "^4.17.1",
@@ -57,6 +58,5 @@
     "protractor": "^5.4.2",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "^3.5.3"
   }
 }
