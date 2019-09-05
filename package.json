@@ -13,8 +13,8 @@
   },
   "private": true,
   "engines": {
-    "node": "~8.11.2",
-    "npm": "~6.4.1"
+    "node": "^12.9.1",
+    "npm": "^6.11.3"
   },
   "dependencies": {
     "@angular/animations": "^8.2.4",
