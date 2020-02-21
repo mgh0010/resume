@@ -6,6 +6,15 @@ import { Injectable } from '@angular/core';
 export class ProjectsService {
   imagePath = 'assets/images/';
 
+  toAddLater = {
+    'project-samson': {
+      'name': 'Project Samson',
+      'linkToSite': 'https://projectsamson.herokuapp.com/sign-in/',
+      'imageUrl': this.imagePath + 'project-samson.png',
+      'details': 'Angular 8 Progressive web app with firebase: the most extensive and customizable workout app ever created. Still in progress.'
+    },
+  }
+
   projectData = {
       'resume': {
         'name': 'Portfolio',

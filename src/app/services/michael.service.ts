@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class MichaelService {
   skillsData = {
     'angular': {'name': 'Angular', 'id': 'angular'},
+    'rxjs': {'name': 'RxJs', 'id': 'rxjs'},
     'bs-in-software-eng': {'name': 'BS in Sofware Eng', 'id': 'bs-in-software-eng'},
     'algorithms': {'name': 'Algorithms', 'id': 'algorithms'},
     'software-design': {'name': 'Software Design', 'id': 'software-design'},
@@ -17,10 +18,14 @@ export class MichaelService {
     'jquery': {'name': 'Jquery', 'id': 'html'},
     'ux-friendly-design': {'name': 'UX Friendly Design', 'id': 'ux-friendly-design'},
     'vue-js': {'name': 'Vue Js', 'id': 'vue-js'},
+    'vuex': {'name': 'Vuex', 'id': 'vuex'},
+    'lit-html': {'name': 'lit-html', 'id': 'lit-html'},
+    'lit-element': {'name': 'lit-element', 'id': 'lit-element'},
+    'push-notifications': {'name': 'Push Notifications', 'id': 'push-notifications'},
     'material-design': {'name': 'Material Design', 'id': 'material-design'},
     'bootstrap': {'name': 'Bootstrap', 'id': 'bootstrap'},
     'materialize': {'name': 'Materialize', 'id': 'materialize'},
-    'firebase-db': {'name': 'Firebase Db', 'id': 'firebase-db'},
+    'firebase-cloud': {'name': 'Firebase Cloud', 'id': 'firebase-cloud'},
     'c': {'name': 'C', 'id': 'c'}, 'c-plus-plus': {'name': 'C++', 'id': 'c-plus-plus'},
     'java': {'name': 'Java', 'id': 'java'}
   };

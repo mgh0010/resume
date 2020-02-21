@@ -20,6 +20,15 @@ export class JobsComponent implements OnInit, AfterViewInit {
                       This application allows in branch employees to perform bank related matters on the web.`,
       'icon': 'code'
     },
+    'together': {
+      'title': 'Lead Web Developer',
+      'company': 'Together',
+      'location': 'Remote',
+      'time': 'October 2019 - Jan 2020',
+      'description': `Add to and maintain a Web Administration Portal for Churches to manage their congregation. 
+                      Built with Vue 3 and Vuex. Push notifications handled with firebase`,
+      'icon': 'code'
+    },
     'selex': {
       'title': 'Software Engineer',
       'company': 'Selex Galileo Inc',
