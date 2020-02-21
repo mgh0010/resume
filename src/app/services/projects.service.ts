@@ -16,6 +16,7 @@ export class ProjectsService {
   }
 
   projectData = {
+    ...this.toAddLater,
       'resume': {
         'name': 'Portfolio',
         'linkToSite': 'https://michaelguy.herokuapp.com/',
