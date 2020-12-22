@@ -6,17 +6,19 @@ import { Injectable } from '@angular/core';
 export class ProjectsService {
   imagePath = 'assets/images/';
 
-  toAddLater = {
+  projectData = {
+    'copycodes': {
+      'name': 'CopyCodes',
+      'linkToSite': 'https://copycodes.io',
+      'imageUrl': this.imagePath + 'copycodes.png',
+      'details': 'Ionic / Angular 11 Progressive web app with a Google Cloud Platform backend in nodejs and stripe/twilio for payments/texts. I act as the sole developer and technical liaison.'
+    },
     'project-samson': {
       'name': 'Project Samson',
       'linkToSite': 'https://projectsamson.herokuapp.com/sign-in/',
       'imageUrl': this.imagePath + 'project-samson.png',
       'details': 'Angular 8 Progressive web app with firebase: the most extensive and customizable workout app ever created. Still in progress.'
     },
-  }
-
-  projectData = {
-    ...this.toAddLater,
       'resume': {
         'name': 'Portfolio',
         'linkToSite': 'https://michaelguy.herokuapp.com/',
