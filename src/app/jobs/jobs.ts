@@ -45,7 +45,7 @@ Use Jira and its related suite of Atlassian products.
     'icon': 'code'
   },
   'copycodes': {
-    'title': 'Co-Owner and Lead Developer',
+    'title': 'Co-Owner and Lead Engineer',
     'company': 'CopyCodes | https://copycodes.io',
     'location': 'Remote | Part-time',
     'time': 'September 2020 - Present',

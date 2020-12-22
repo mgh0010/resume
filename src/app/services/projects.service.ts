@@ -11,7 +11,7 @@ export class ProjectsService {
       'name': 'CopyCodes',
       'linkToSite': 'https://copycodes.io',
       'imageUrl': this.imagePath + 'copycodes.png',
-      'details': 'Ionic / Angular 11 Progressive web app with a Google Cloud Platform backend in nodejs and stripe/twilio for payments/texts. I act as the sole developer and technical liaison.'
+      'details': 'Ionic / Angular 11 Progressive web app with a Google Cloud Platform backend in nodejs and stripe/twilio for payments/texts. I act as the sole engineer and technical liaison.'
     },
     'project-samson': {
       'name': 'Project Samson',
