@@ -44,7 +44,7 @@ const routes: Routes = [
     ResumeComponent,
     AttributeListComponent,
     ProjectsComponent,
-    CheckoutComponent
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,30 +7,40 @@ export class MichaelService {
   skillsData = {
     'angular': {'name': 'Angular', 'id': 'angular'},
     'rxjs': {'name': 'RxJs', 'id': 'rxjs'},
+    'react': {'name': 'React', 'id': 'react'},
+    'pubsub': {'name': 'Pub/Sub', 'id': 'pubsub'},
+    'vue-js': {'name': 'Vue Js', 'id': 'vue-js'},
+    'vuex': {'name': 'Vuex', 'id': 'vuex'},
+    'gcp': {'name': 'Google Cloud Platform', 'id': 'gcp'},
+    'cross-platform-dev': {'name': 'Cross Platform Dev', 'id': 'cross-platform-dev'},
+    'ionic-rn': {'name': 'Ionic/React Native', 'id': 'ionic-rn'},
+    'firebase': {'name': 'Firebase', 'id': 'firebase'},
+    'clean-code': {'name': 'Clean Code', 'id': 'clean-code'},
+    'lit-html': {'name': 'lit-html', 'id': 'lit-html'},
+    'lit-element': {'name': 'lit-element', 'id': 'lit-element'},
     'bs-in-software-eng': {'name': 'BS in Sofware Eng', 'id': 'bs-in-software-eng'},
     'algorithms': {'name': 'Algorithms', 'id': 'algorithms'},
     'software-design': {'name': 'Software Design', 'id': 'software-design'},
     'software-process': {'name': 'Software Process', 'id': 'software-process'},
-    'clean-code': {'name': 'Clean Code', 'id': 'clean-code'},
     'javascript': {'name': 'Javascript', 'id': 'javascript'},
     'css': {'name': 'CSS', 'id': 'css'},
     'html': {'name': 'HTML', 'id': 'html'},
     'jquery': {'name': 'Jquery', 'id': 'html'},
     'ux-friendly-design': {'name': 'UX Friendly Design', 'id': 'ux-friendly-design'},
-    'vue-js': {'name': 'Vue Js', 'id': 'vue-js'},
-    'vuex': {'name': 'Vuex', 'id': 'vuex'},
-    'lit-html': {'name': 'lit-html', 'id': 'lit-html'},
-    'lit-element': {'name': 'lit-element', 'id': 'lit-element'},
     'push-notifications': {'name': 'Push Notifications', 'id': 'push-notifications'},
-    'material-design': {'name': 'Material Design', 'id': 'material-design'},
     'bootstrap': {'name': 'Bootstrap', 'id': 'bootstrap'},
-    'materialize': {'name': 'Materialize', 'id': 'materialize'},
-    'firebase-cloud': {'name': 'Firebase Cloud', 'id': 'firebase-cloud'},
     'c': {'name': 'C', 'id': 'c'}, 'c-plus-plus': {'name': 'C++', 'id': 'c-plus-plus'},
     'java': {'name': 'Java', 'id': 'java'}
   };
-  attributesData = ['Joyful', 'Hardworking', 'A persistent NEED to learn', 'Detail Oriented with Design',
-                      'Guided by a good balance of Realism and Imagination'];
+  attributesData = [
+    'Joyful',
+    'Servant Leader',
+    'Delivery Driven',
+    'Hardworking',
+    'A persistent NEED to learn',
+    'Detail Oriented with Design',
+    'Guided by a good balance of Realism and Imagination'
+  ];
 
   constructor() { }
 
