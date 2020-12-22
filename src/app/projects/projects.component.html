@@ -1,17 +1,22 @@
-<h1 class="center mys animated fast invisible" id="projects-header">Projects</h1>
 <div class="container">
+  <h3 class="mys animated fast invisible"
+      id="projects-header">Side Projects</h3>
   <div class="row">
-    <div *ngFor="let project of ps.projects(); let i = index" class="col s12 m6">
-      <div class="card project-card hoverable invisible animated fast" [id]="'project' + i">
+    <div *ngFor="let project of ps.projects(); let i = index"
+         class="col s12 m6">
+      <div class="card project-card hoverable invisible animated fast"
+           [id]="'project' + i">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" [src]="ps.projectData[project]['imageUrl']">
+          <img class="activator"
+               [src]="ps.projectData[project]['imageUrl']">
         </div>
         <div class="card-content mypbg">
           <span class="card-title activator grey-text text-darken-4">
             {{ps.projectData[project]['name']}}
             <i class="material-icons right">more_vert</i>
           </span>
-          <p><a class="btn btn-flat" [href]="ps.projectData[project]['linkToSite']">Link to project</a></p>
+          <p><a class="btn btn-flat"
+               [href]="ps.projectData[project]['linkToSite']">Link to project</a></p>
         </div>
         <div class="card-reveal mypbg">
           <span class="card-title grey-text text-darken-4">
