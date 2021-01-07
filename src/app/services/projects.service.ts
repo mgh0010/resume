@@ -13,6 +13,12 @@ export class ProjectsService {
       'imageUrl': this.imagePath + 'copycodes.png',
       'details': 'Ionic / Angular 11 Progressive web app with a Google Cloud Platform backend in nodejs and stripe/twilio for payments/texts. I act as the sole engineer and technical liaison.'
     },
+    'listalot': {
+      'name': 'Listalot',
+      'linkToSite': 'https://listalott.web.app',
+      'imageUrl': this.imagePath + 'listalot.png',
+      'details': 'React / Ionic web app with firestore backend and firebase authentication and hosting. Fully functional component driven with hooks and Context/Provider usage.'
+    },
     'project-samson': {
       'name': 'Project Samson',
       'linkToSite': 'https://projectsamson.herokuapp.com/sign-in/',
