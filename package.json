@@ -1,62 +1,30 @@
 {
   "name": "resume",
-  "version": "1.2.0",
-  "main": "app.js",
-  "scripts": {
-    "ng": "ng",
-    "start": "node app.js",
-    "build": "ng build --aot --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
+  "version": "3.0.0",
   "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json",
+    "start": "vite preview"
+  },
   "engines": {
-    "node": "^12.9.1",
-    "npm": "^6.11.3"
+    "node": ">=20"
   },
   "dependencies": {
-    "@angular/animations": "^8.2.4",
-    "@angular/cli": "^8.3.3",
-    "@angular/common": "^8.2.4",
-    "@angular/compiler": "^8.2.4",
-    "@angular/compiler-cli": "^8.2.4",
-    "@angular/core": "^8.2.4",
-    "@angular/forms": "^8.2.4",
-    "@angular/http": "^6.1.10",
-    "@angular/platform-browser": "^8.2.4",
-    "@angular/platform-browser-dynamic": "^8.2.4",
-    "@angular/pwa": "^0.10.7",
-    "@angular/router": "^8.2.4",
-    "@angular/service-worker": "^8.2.4",
-    "typescript": "~3.5.3",
-    "animate.css": "^3.7.2",
-    "core-js": "^2.6.9",
-    "express": "^4.17.1",
-    "jquery": "^3.4.1",
-    "materialize-css": "^1.0.0",
-    "node": "^12.9.1",
-    "npm": "^6.11.3",
-    "rxjs": "^6.5.3",
-    "shrink-ray-current": "^4.0.0",
-    "zone.js": "^0.9.1"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.3",
-    "@angular/language-service": "^8.2.4",
-    "@types/jasmine": "^2.8.16",
-    "@types/jasminewd2": "^2.0.6",
-    "@types/node": "~8.9.4",
-    "codelyzer": "~4.2.1",
-    "jasmine-core": "~2.99.1",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~1.7.1",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "^2.0.6",
-    "karma-jasmine": "~1.1.1",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "^5.4.2",
-    "ts-node": "~5.0.1",
-    "tslint": "~5.9.1"
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }

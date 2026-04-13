@@ -1,16 +1,23 @@
-const express = require('express');
-const shrinkRay = require('shrink-ray-current');
-const http = require('http');
-const path = require('path');
+const express = require("express");
+const compression = require("compression");
+const path = require("path");
 const app = express();
+const distPath = path.join(__dirname, "dist", "resume");
 
-app.use(shrinkRay());
+app.use(compression());
 
-app.use(express.static(path.join(__dirname, 'dist', 'resume')));
-app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, 'dist', 'resume', 'index.html'));
+app.use(
+  express.static(distPath, {
+    maxAge: "1y",
+    immutable: true,
+    index: false,
+  }),
+);
+
+app.get("*", (req, res) => {
+  res.setHeader("Cache-Control", "no-cache");
+  res.sendFile(path.join(distPath, "index.html"));
 });
-const port = process.env.PORT || '3001';
-app.set('port', port);
-const server = http.createServer(app);
-server.listen(port, () => console.log('Running'));
+
+const port = process.env.PORT || "3001";
+app.listen(port, () => console.log("Running"));
